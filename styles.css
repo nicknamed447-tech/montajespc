@@ -229,11 +229,11 @@ td.part-cell { width: 140px; color: #dce4ef; font-weight: 700; }
   html.android-apk body { touch-action: pan-y; }
   body.drawer-open { overflow: hidden; }
   .app-shell { min-height: 100dvh; grid-template-columns: minmax(0, 1fr); }
-  .sidebar { position: fixed; z-index: 1201; inset: 0 auto 0 0; width: min(84vw, 330px); height: 100dvh; overflow-y: auto; padding: calc(18px + env(safe-area-inset-top)) 16px calc(18px + env(safe-area-inset-bottom)); border-right: 1px solid var(--line); background: #10151e; box-shadow: 16px 0 50px #0007; transform: translateX(-105%); transition: transform .22s ease; }
-  html.android-apk .sidebar { transition: transform .16s cubic-bezier(.22,.8,.25,1); will-change: transform; }
-  .sidebar.is-open { transform: translateX(0); }
+  .sidebar { position: fixed; z-index: 1201; inset: 0 auto 0 0; width: min(84vw, 330px); height: 100dvh; overflow-y: auto; padding: calc(18px + env(safe-area-inset-top)) 16px calc(18px + env(safe-area-inset-bottom)); border-right: 1px solid var(--line); background: #10151e; box-shadow: 16px 0 50px #0007; transform: translateX(-105%); transition: transform .22s ease; pointer-events: none; }
+  html.android-apk .sidebar { transition: transform .1s cubic-bezier(.2,.8,.2,1); will-change: transform; }
+  .sidebar.is-open { transform: translateX(0); pointer-events: auto; }
   .drawer-backdrop { position: fixed; z-index: 1200; inset: 0; display: block; background: #05080dbd; opacity: 0; pointer-events: none; transition: opacity .22s ease; }
-  html.android-apk .drawer-backdrop { transition: opacity .14s ease-out; }
+  html.android-apk .drawer-backdrop { transition: opacity .08s ease-out; }
   .drawer-backdrop.is-visible { opacity: 1; pointer-events: auto; }
   .sidebar-brand { justify-content: flex-start; padding: 0 4px 24px; }
   .menu-close { display: grid; width: 36px; height: 36px; place-items: center; margin-left: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-2); color: var(--text); font-size: 24px; }
