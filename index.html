@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1118">
+  <title>Montajes PC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="login-screen" class="login-screen">
+    <div class="login-wrap">
+    <form id="login-form" class="login-card" method="post">
+      <div class="brand-mark">MP</div>
+      <p class="eyebrow">ESPACIO PRIVADO</p>
+      <h1>Montajes PC</h1>
+      <p class="muted">Inicia sesión para continuar.</p>
+      <label for="username">Usuario</label>
+      <input id="username" name="username" autocomplete="username" required>
+      <label for="password">Contraseña</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button class="button primary full" type="submit">Iniciar sesión</button>
+      <p class="hint">Las cuentas las crea el administrador desde Supabase.</p>
+    </form>
+    <p id="login-error" class="error login-error-global" role="alert"></p>
+    </div>
+  </main>
+
+  <div id="app" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><span class="brand-mark small">MP</span><span>Montajes PC</span></div>
+      <nav id="navigation" aria-label="Navegación"></nav>
+      <div class="sidebar-bottom">
+        <span id="signed-in-as" class="muted"></span>
+        <button id="sign-out" class="button ghost full" type="button">Cerrar sesión</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow" id="page-kicker">TU ESPACIO</p><h1 id="page-title">Montajes</h1></div><span id="role-badge" class="role-badge"></span></header>
+      <section id="catalog-page" class="page hidden">
+        <div class="page-intro"><div><h2>Catálogo de piezas</h2><p class="muted">Consulta las especificaciones y notas de análisis de cada modelo.</p><p id="catalog-updated" class="catalog-updated"></p></div></div>
+        <div class="catalog-panels">
+          <section class="catalog-panel" aria-labelledby="cpu-panel-title">
+            <header class="catalog-panel-heading"><div><p class="eyebrow">PROCESADORES</p><h3 id="cpu-panel-title">CPU</h3></div><span class="panel-count" id="cpu-count"></span></header>
+            <label class="catalog-search">Buscar modelo<input type="search" data-catalog-search="cpu" placeholder="Ej. Ryzen 7 7800X3D" autocomplete="off"></label>
+            <div class="filter-bar"><div class="filter-pills" data-brand-filter="cpu" aria-label="Filtrar CPU por marca"></div><label class="sort-control">Ordenar por<select data-catalog-sort="cpu"><option value="date">Lanzamiento: más reciente</option><option value="generation">Generación</option></select></label></div>
+            <div id="cpu-catalog-list" class="catalog-list"></div>
+          </section>
+          <section class="catalog-panel" aria-labelledby="gpu-panel-title">
+            <header class="catalog-panel-heading"><div><p class="eyebrow">TARJETAS GRÁFICAS</p><h3 id="gpu-panel-title">GPU</h3></div><span class="panel-count" id="gpu-count"></span></header>
+            <label class="catalog-search">Buscar modelo<input type="search" data-catalog-search="gpu" placeholder="Ej. GeForce RTX 5090" autocomplete="off"></label>
+            <div class="filter-bar"><div class="filter-pills" data-brand-filter="gpu" aria-label="Filtrar GPU por marca"></div><label class="sort-control">Ordenar por<select data-catalog-sort="gpu"><option value="date">Lanzamiento: más reciente</option><option value="generation">Generación</option></select></label></div>
+            <div id="gpu-catalog-list" class="catalog-list"></div>
+          </section>
+        </div>
+      </section>
+      <section id="builds-page" class="page hidden">
+        <div class="page-intro"><div><h2>Montajes</h2><p class="muted" id="builds-subtitle">Tus configuraciones guardadas.</p></div><button id="new-build" class="button primary">＋ Crear montaje</button></div>
+        <form id="new-build-form" class="new-build-form hidden"><label for="new-build-name">Nombre del montaje</label><input id="new-build-name" maxlength="100" placeholder="Ej. PC de edición" required><button class="button primary" type="submit">Crear</button><button id="cancel-new-build" class="button ghost" type="button">Cancelar</button></form>
+        <div id="build-list" class="build-list"></div>
+        <div id="no-access" class="empty-state hidden">Aún no tienes acceso a ver ningún montaje, contacta con el administrador para que te de acceso</div>
+      </section>
+      <section id="admin-page" class="page hidden">
+        <div class="page-intro"><div><h2>Panel de admin</h2><p class="muted">Elige qué montajes puede consultar cada usuario.</p></div></div>
+        <div class="admin-panel"><div class="admin-panel-head"><div><h3>Accesos de usuarios</h3><p class="muted">Las cuentas y contraseñas se gestionan en Supabase.</p></div><button id="refresh-users" class="button secondary" type="button">Actualizar</button></div><div id="access-list" class="access-list"></div></div>
+      </section>
+      <div id="toast" class="toast" role="status"></div>
+    </main>
+  </div>
+
+  <dialog id="component-dialog" class="component-dialog"><button id="close-dialog" class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow" id="dialog-kind"></p><h2 id="dialog-title"></h2><p class="muted" id="dialog-subtitle"></p><dl id="dialog-specs" class="spec-list"></dl><section class="review-note"><h3>Qué tener en cuenta en las reviews</h3><p id="dialog-review-note"></p><div id="dialog-review-sources" class="review-sources"></div></section></dialog>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
