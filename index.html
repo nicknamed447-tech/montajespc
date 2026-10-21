@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d1118">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>Montajes PC</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -28,8 +32,9 @@
   </main>
 
   <div id="app" class="app-shell hidden">
-    <aside class="sidebar">
-      <div class="sidebar-brand"><span class="brand-mark small">MP</span><span>Montajes PC</span></div>
+    <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    <aside id="app-sidebar" class="sidebar" aria-label="Menú principal" aria-hidden="true">
+      <div class="sidebar-brand"><span class="brand-mark small">MP</span><span>Montajes PC</span><button id="menu-close" class="menu-close" type="button" aria-label="Cerrar menú">×</button></div>
       <nav id="navigation" aria-label="Navegación"></nav>
       <div class="sidebar-bottom">
         <span id="signed-in-as" class="muted"></span>
@@ -37,9 +42,9 @@
       </div>
     </aside>
     <main class="main-content">
-      <header class="topbar"><div><p class="eyebrow" id="page-kicker">TU ESPACIO</p><h1 id="page-title">Montajes</h1></div><div class="topbar-tools"><div id="user-preview-controls" class="user-preview-controls hidden"><button id="user-preview-toggle" class="button secondary" type="button" aria-expanded="false" aria-pressed="false">Vista usuario</button><div id="user-preview-menu" class="user-preview-menu hidden"><label for="user-preview-select">Elegir usuario</label><select id="user-preview-select"><option value="">Selecciona un usuario…</option></select><p id="user-preview-status" class="muted" role="status"></p></div></div><span id="role-badge" class="role-badge"></span></div></header>
+      <header class="topbar"><div class="topbar-title"><button id="menu-open" class="menu-open" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button><div><p class="eyebrow" id="page-kicker">TU ESPACIO</p><h1 id="page-title">Montajes</h1></div></div><div class="topbar-tools"><div id="user-preview-controls" class="user-preview-controls hidden"><button id="user-preview-toggle" class="button secondary" type="button" aria-expanded="false" aria-pressed="false">Vista usuario</button><div id="user-preview-menu" class="user-preview-menu hidden"><label for="user-preview-select">Elegir usuario</label><select id="user-preview-select"><option value="">Selecciona un usuario…</option></select><p id="user-preview-status" class="muted" role="status"></p></div></div><span id="role-badge" class="role-badge"></span></div></header>
       <section id="catalog-page" class="page hidden">
-        <div class="page-intro"><div><h2>Catálogo de piezas</h2><p class="muted">Consulta las especificaciones y notas de análisis de cada modelo.</p><p id="catalog-updated" class="catalog-updated"></p></div><div class="compare-controls"><span id="compare-status" class="muted hidden" aria-live="polite"></span><button id="compare-show" class="button primary hidden" type="button" disabled>Ver comparación</button><button id="compare-toggle" class="button secondary" type="button" aria-pressed="false">Comparar</button></div></div>
+        <div class="page-intro"><div><h2>Catálogo de piezas</h2><p class="muted">Consulta las especificaciones y notas de análisis de cada modelo.</p><p id="catalog-updated" class="catalog-updated"></p><p id="reviews-updated" class="catalog-updated"></p></div><div class="compare-controls"><span id="compare-status" class="muted hidden" aria-live="polite"></span><button id="compare-show" class="button primary hidden" type="button" disabled>Ver comparación</button><button id="compare-toggle" class="button secondary" type="button" aria-pressed="false">Comparar</button></div></div>
         <div class="catalog-panels">
           <section class="catalog-panel" aria-labelledby="cpu-panel-title">
             <header class="catalog-panel-heading"><div><p class="eyebrow">PROCESADORES</p><h3 id="cpu-panel-title">CPU</h3></div><span class="panel-count" id="cpu-count"></span></header>
@@ -69,9 +74,10 @@
     </main>
   </div>
 
-  <dialog id="component-dialog" class="component-dialog"><button id="close-dialog" class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow" id="dialog-kind"></p><h2 id="dialog-title"></h2><p class="muted" id="dialog-subtitle"></p><dl id="dialog-specs" class="spec-list"></dl><section class="review-note"><h3>Qué tener en cuenta en las reviews</h3><p id="dialog-review-note"></p><div id="dialog-review-sources" class="review-sources"></div></section></dialog>
+  <dialog id="component-dialog" class="component-dialog"><button id="close-dialog" class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow" id="dialog-kind"></p><h2 id="dialog-title"></h2><p class="muted" id="dialog-subtitle"></p><dl id="dialog-specs" class="spec-list"></dl><section class="review-note"><h3>Qué tener en cuenta en las reviews</h3><p id="dialog-review-note"></p><div id="dialog-review-alerts" class="review-alerts hidden"></div><div id="dialog-review-sources" class="review-sources"></div></section></dialog>
   <dialog id="comparison-dialog" class="comparison-dialog"><button id="close-comparison-dialog" class="dialog-close" aria-label="Cerrar comparación">×</button><p class="eyebrow">CATÁLOGO DE PIEZAS</p><h2>Comparar componentes</h2><div id="comparison-content"></div></dialog>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
+  <script>if('serviceWorker' in navigator && location.protocol!=='file:')window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js').catch(()=>{}));</script>
 </body>
 </html>
