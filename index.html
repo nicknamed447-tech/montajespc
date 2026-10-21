@@ -37,9 +37,9 @@
       </div>
     </aside>
     <main class="main-content">
-      <header class="topbar"><div><p class="eyebrow" id="page-kicker">TU ESPACIO</p><h1 id="page-title">Montajes</h1></div><span id="role-badge" class="role-badge"></span></header>
+      <header class="topbar"><div><p class="eyebrow" id="page-kicker">TU ESPACIO</p><h1 id="page-title">Montajes</h1></div><div class="topbar-tools"><div id="user-preview-controls" class="user-preview-controls hidden"><button id="user-preview-toggle" class="button secondary" type="button" aria-expanded="false" aria-pressed="false">Vista usuario</button><div id="user-preview-menu" class="user-preview-menu hidden"><label for="user-preview-select">Elegir usuario</label><select id="user-preview-select"><option value="">Selecciona un usuario…</option></select><p id="user-preview-status" class="muted" role="status"></p></div></div><span id="role-badge" class="role-badge"></span></div></header>
       <section id="catalog-page" class="page hidden">
-        <div class="page-intro"><div><h2>Catálogo de piezas</h2><p class="muted">Consulta las especificaciones y notas de análisis de cada modelo.</p><p id="catalog-updated" class="catalog-updated"></p></div></div>
+        <div class="page-intro"><div><h2>Catálogo de piezas</h2><p class="muted">Consulta las especificaciones y notas de análisis de cada modelo.</p><p id="catalog-updated" class="catalog-updated"></p></div><div class="compare-controls"><span id="compare-status" class="muted hidden" aria-live="polite"></span><button id="compare-show" class="button primary hidden" type="button" disabled>Ver comparación</button><button id="compare-toggle" class="button secondary" type="button" aria-pressed="false">Comparar</button></div></div>
         <div class="catalog-panels">
           <section class="catalog-panel" aria-labelledby="cpu-panel-title">
             <header class="catalog-panel-heading"><div><p class="eyebrow">PROCESADORES</p><h3 id="cpu-panel-title">CPU</h3></div><span class="panel-count" id="cpu-count"></span></header>
@@ -70,6 +70,7 @@
   </div>
 
   <dialog id="component-dialog" class="component-dialog"><button id="close-dialog" class="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow" id="dialog-kind"></p><h2 id="dialog-title"></h2><p class="muted" id="dialog-subtitle"></p><dl id="dialog-specs" class="spec-list"></dl><section class="review-note"><h3>Qué tener en cuenta en las reviews</h3><p id="dialog-review-note"></p><div id="dialog-review-sources" class="review-sources"></div></section></dialog>
+  <dialog id="comparison-dialog" class="comparison-dialog"><button id="close-comparison-dialog" class="dialog-close" aria-label="Cerrar comparación">×</button><p class="eyebrow">CATÁLOGO DE PIEZAS</p><h2>Comparar componentes</h2><div id="comparison-content"></div></dialog>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>

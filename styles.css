@@ -58,9 +58,19 @@ button { cursor: pointer; }
 .main-content { min-width: 0; padding: 32px clamp(20px, 4vw, 60px) 70px; }
 .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 34px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
 .topbar h1 { margin: 0; font-size: 28px; }
+.topbar-tools { display: flex; align-items: center; gap: 12px; }
 .role-badge { padding: 7px 10px; border: 1px solid #80e0ba44; border-radius: 99px; color: var(--accent); font-size: 11px; }
+.user-preview-controls { position: relative; }
+.user-preview-controls > .button.active { border-color: #80e0ba77; color: var(--accent); }
+.user-preview-menu { position: absolute; z-index: 10; top: calc(100% + 10px); right: 0; display: grid; gap: 8px; width: min(280px, calc(100vw - 32px)); padding: 15px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); box-shadow: 0 16px 45px #0008; }
+.user-preview-menu label { color: var(--muted); font-size: 12px; font-weight: 700; }
+.user-preview-menu select { width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-2); color: var(--text); }
+.user-preview-menu p { min-height: 16px; margin: 0; font-size: 11px; }
 .page { max-width: 1280px; margin: 0 auto; }
 .page-intro, .admin-panel-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.compare-controls { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+.compare-controls #compare-status { font-size: 12px; text-align: right; }
+.compare-controls .button.active { border-color: #80e0ba77; color: var(--accent); }
 .page h2 { margin: 0 0 6px; font-size: 24px; }
 .page-intro p { margin: 0; }
 
@@ -90,6 +100,8 @@ button { cursor: pointer; }
 .catalog-list .component-card .card-top { margin-bottom: 11px; }
 .component-card { min-height: 143px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); color: var(--text); text-align: left; transition: border-color .15s, transform .15s; }
 .component-card:hover { transform: translateY(-2px); border-color: #80e0ba88; }
+.component-card.comparison-selected { border-color: var(--accent); box-shadow: 0 0 0 2px #80e0ba44, inset 3px 0 var(--accent); }
+.compare-pick { display: inline-block; margin: 0 0 8px; color: var(--accent); font-size: 11px; font-weight: 700; }
 .component-card.coming-soon { border-color: #f2c94c; box-shadow: inset 3px 0 #f2c94c; }
 .component-card.coming-soon:hover { border-color: #ffe27a; }
 .coming-soon-tag { margin-left: 8px; padding: 3px 7px; border-radius: 99px; background: #f2c94c22; color: #f2c94c; font-size: 9px; font-weight: 800; letter-spacing: .07em; white-space: nowrap; }
@@ -159,6 +171,21 @@ td.part-cell { width: 140px; color: #dce4ef; font-weight: 700; }
 .access-check { display: flex; align-items: center; gap: 7px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel-2); font-size: 12px; }
 .access-check input { accent-color: var(--accent); }
 .component-dialog { width: min(600px, calc(100vw - 30px)); max-height: 85vh; overflow: auto; padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); color: var(--text); }
+.comparison-dialog { width: min(1100px, calc(100vw - 30px)); max-height: 90vh; overflow: auto; padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); color: var(--text); }
+.comparison-dialog::backdrop { background: #05080dbd; backdrop-filter: blur(4px); }
+.comparison-dialog h2 { margin: 0 0 20px; font: 600 26px 'Space Grotesk', sans-serif; letter-spacing: -.04em; }
+.comparison-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 0 0 12px; color: var(--muted); font-size: 12px; }
+.comparison-legend u, .comparison-best { color: #67e6b1; text-decoration-color: #67e6b1; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.comparison-second { color: #f2d27a; font-weight: 900 !important; }
+.comparison-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+.comparison-table { width: 100%; min-width: 900px; border-collapse: collapse; }
+.comparison-table th, .comparison-table td { padding: 11px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.comparison-table thead th { position: sticky; top: 0; background: var(--panel-2); }
+.comparison-table th:first-child { width: 22%; color: var(--muted); }
+.comparison-table tbody tr:last-child th, .comparison-table tbody tr:last-child td { border-bottom: 0; }
+.comparison-table tbody th { color: var(--muted); font-size: 12px; font-weight: 600; }
+.comparison-table tbody td { font-size: 13px; font-weight: 600; }
+.compare-mode-hint { margin: 14px 0 0; padding: 10px 12px; border: 1px solid #80e0ba33; border-radius: 9px; color: var(--accent); font-size: 12px; }
 .component-dialog::backdrop { background: #05080dbd; backdrop-filter: blur(4px); }
 .dialog-close { position: absolute; top: 14px; right: 18px; border: 0; background: transparent; color: var(--muted); font-size: 28px; }
 .component-dialog h2 { margin: 0; font-size: 26px; }
@@ -187,8 +214,12 @@ td.part-cell { width: 140px; color: #dce4ef; font-weight: 700; }
   .sidebar-bottom .button { padding: 8px; font-size: 11px; }
   .main-content { padding: 22px 16px 50px; }
   .topbar { margin-bottom: 25px; }
+  .topbar-tools { gap: 7px; }
+  .topbar-tools .button { padding: 8px 10px; font-size: 11px; }
   .topbar h1 { font-size: 24px; }
   .page-intro { align-items: flex-start; }
+  .compare-controls { align-items: flex-end; flex-direction: column-reverse; gap: 6px; }
+  .compare-controls #compare-status { max-width: 145px; font-size: 10px; }
   .page-intro > .button { white-space: nowrap; }
   .filter-bar { align-items: flex-start; flex-direction: column; }
   .catalog-panels { grid-template-columns: 1fr; }
