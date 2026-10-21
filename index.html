@@ -47,16 +47,20 @@
         <div class="page-intro"><div><h2>Catálogo de piezas</h2><p class="muted">Consulta las especificaciones y notas de análisis de cada modelo.</p><p id="catalog-updated" class="catalog-updated"></p><p id="reviews-updated" class="catalog-updated"></p></div><div class="compare-controls"><span id="compare-status" class="muted hidden" aria-live="polite"></span><button id="compare-show" class="button primary hidden" type="button" disabled>Ver comparación</button><button id="compare-toggle" class="button secondary" type="button" aria-pressed="false">Comparar</button></div></div>
         <div class="catalog-panels">
           <section class="catalog-panel" aria-labelledby="cpu-panel-title">
-            <header class="catalog-panel-heading"><div><p class="eyebrow">PROCESADORES</p><h3 id="cpu-panel-title">CPU</h3></div><span class="panel-count" id="cpu-count"></span></header>
-            <label class="catalog-search">Buscar modelo<input type="search" data-catalog-search="cpu" placeholder="Ej. Ryzen 7 7800X3D" autocomplete="off"></label>
-            <div class="filter-bar"><div class="filter-pills" data-brand-filter="cpu" aria-label="Filtrar CPU por marca"></div><label class="sort-control">Ordenar por<select data-catalog-sort="cpu"><option value="date">Lanzamiento: más reciente</option><option value="generation">Generación</option></select></label></div>
-            <div id="cpu-catalog-list" class="catalog-list"></div>
+            <header class="catalog-panel-heading"><button class="catalog-panel-toggle" type="button" data-catalog-panel="cpu" aria-expanded="false" aria-controls="cpu-panel-content"><span><p class="eyebrow">PROCESADORES</p><h3 id="cpu-panel-title">CPU</h3></span><span class="panel-heading-meta"><span class="panel-count" id="cpu-count"></span><span class="chevron">⌄</span></span></button></header>
+            <div class="catalog-panel-content hidden" id="cpu-panel-content">
+              <label class="catalog-search">Buscar modelo<input type="search" data-catalog-search="cpu" placeholder="Ej. Ryzen 7 7800X3D" autocomplete="off"></label>
+              <div class="filter-bar"><div class="filter-pills" data-brand-filter="cpu" aria-label="Filtrar CPU por marca"></div><label class="sort-control">Ordenar por<select data-catalog-sort="cpu"><option value="date">Lanzamiento: más reciente</option><option value="generation">Generación</option></select></label></div>
+              <div id="cpu-catalog-list" class="catalog-list"></div>
+            </div>
           </section>
           <section class="catalog-panel" aria-labelledby="gpu-panel-title">
-            <header class="catalog-panel-heading"><div><p class="eyebrow">TARJETAS GRÁFICAS</p><h3 id="gpu-panel-title">GPU</h3></div><span class="panel-count" id="gpu-count"></span></header>
-            <label class="catalog-search">Buscar modelo<input type="search" data-catalog-search="gpu" placeholder="Ej. GeForce RTX 5090" autocomplete="off"></label>
-            <div class="filter-bar"><div class="filter-pills" data-brand-filter="gpu" aria-label="Filtrar GPU por marca"></div><label class="sort-control">Ordenar por<select data-catalog-sort="gpu"><option value="date">Lanzamiento: más reciente</option><option value="generation">Generación</option></select></label></div>
-            <div id="gpu-catalog-list" class="catalog-list"></div>
+            <header class="catalog-panel-heading"><button class="catalog-panel-toggle" type="button" data-catalog-panel="gpu" aria-expanded="false" aria-controls="gpu-panel-content"><span><p class="eyebrow">TARJETAS GRÁFICAS</p><h3 id="gpu-panel-title">GPU</h3></span><span class="panel-heading-meta"><span class="panel-count" id="gpu-count"></span><span class="chevron">⌄</span></span></button></header>
+            <div class="catalog-panel-content hidden" id="gpu-panel-content">
+              <label class="catalog-search">Buscar modelo<input type="search" data-catalog-search="gpu" placeholder="Ej. GeForce RTX 5090" autocomplete="off"></label>
+              <div class="filter-bar"><div class="filter-pills" data-brand-filter="gpu" aria-label="Filtrar GPU por marca"></div><label class="sort-control">Ordenar por<select data-catalog-sort="gpu"><option value="date">Lanzamiento: más reciente</option><option value="generation">Generación</option></select></label></div>
+              <div id="gpu-catalog-list" class="catalog-list"></div>
+            </div>
           </section>
         </div>
       </section>

@@ -1,26 +1,5 @@
 {
-  "checkedAt": "2026-10-21T22:15:46.009674+00:00",
+  "checkedAt": null,
   "windowDays": 30,
-  "alerts": [
-    {
-      "kind": "cpu",
-      "brand": "Intel",
-      "model": "Core i9-14900K",
-      "title": "Intel Core i9-14900K User Reports Fourth CPU Failure Despite BIOS Update - eTeknix",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVUpScllEUlBYTzBpRXBaX0ROalZLRGM2MU96X0k1VTBSUzVnX3B3am9pYnNHWEpySm5iQl95bVFfS1p1MlZFNFNPSHZuaTFkTnh4Q2N4eXI0YTN2MWozeW9hMnZ3U0dydERDOEZaRktUdFNicHZoNTJVNnVMdU1WLVh4Rlktb0lRZzVMckxEa1U2bGF2eGNkMDNMZDh0dw?oc=5",
-      "date": "2026-10-16",
-      "source": "eTeknix",
-      "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
-    },
-    {
-      "kind": "cpu",
-      "brand": "Intel",
-      "model": "Core i9-14900K",
-      "title": "Intel Core i9-14900K user reports three failed CPUs, and says fourth is now also dying - TweakTown",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTVJMSFpMNTAtY0NsM3E0OU1PdkkyUjAyS3Y4MFNfQmJ3V0k4NkFLNFFGeWZIeDIzbjNObEF1N1lSTkY0Y2xNT0JIdkpKc3RqcXVVZFdjVElhNUpvX3VwUkMzeXUzSURCd3g1RzFRMUlXY245VkVwaTVQY2hEZGlFWlRULWFBOXlXcEU3WG9CWHJJU1ozN1J0aTJjTWZhdXAxc2lOUkVkRUdFSmd3TEJqb1hBV2hudXhQTG50blR6REtBNDJJc0l6UlZyU2ZlQ2s?oc=5",
-      "date": "2026-10-05",
-      "source": "TweakTown",
-      "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
-    }
-  ]
+  "alerts": []
 }
