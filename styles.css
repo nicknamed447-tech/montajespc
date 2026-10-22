@@ -57,6 +57,7 @@ button { cursor: pointer; }
 .nav-button.active { box-shadow: inset 3px 0 var(--accent); }
 .sidebar-bottom { display: grid; gap: 12px; margin-top: auto; padding: 0 4px; font-size: 12px; }
 .sidebar-bottom .button { margin: 0; }
+.app-version { color: var(--muted); font-size: 12px; text-align: center; letter-spacing: .04em; }
 .main-content { min-width: 0; padding: 32px clamp(20px, 4vw, 60px) 70px; }
 .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 34px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
 .topbar h1 { margin: 0; font-size: 28px; }
