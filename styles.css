@@ -135,6 +135,7 @@ html:not(.android-apk) .catalog-panel-toggle .chevron { display: none; }
 .build-card.open .build-heading .chevron, .part-row.part-open .chevron { transform: rotate(180deg); }
 .build-body { padding: 0 18px 18px; }
 .price-total { margin: 0 0 13px; font: 700 16px 'Space Grotesk', sans-serif; }
+.export-build { display: block; margin: 0 0 10px; font-size: 13px; }
 .arrival-summary { margin: -3px 0 13px; padding: 10px 12px; border: 1px solid #f2c94c66; border-radius: 9px; background: #f2c94c12; color: #f2d27a; font-size: 13px; font-weight: 700; line-height: 1.45; }
 .build-table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 10px; }
 html.android-apk .build-table-wrap .part-row:not(.part-open) > td:not(.part-cell) { display: none; }
@@ -145,6 +146,15 @@ html.android-apk .build-table-wrap td.part-cell { padding: 0; }
 .part-row-price { margin-left: auto; color: var(--accent); font-weight: 800; white-space: nowrap; }
 .part-row-toggle .chevron { flex: 0 0 auto; }
 .part-row.part-open .part-cell { border-bottom: 1px solid var(--line); }
+.custom-part-cell { padding: 4px 7px !important; }
+.custom-row-label { display: flex; align-items: center; gap: 5px; min-width: 0; }
+.custom-row-delete { flex: 0 0 28px; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #ff5b6b; font-size: 25px; font-weight: 800; line-height: 1; }
+.custom-row-delete:hover { background: #ff5b6b1a; }
+.custom-row-name { flex: 1; min-width: 0; font-weight: 700; }
+.custom-row-toggle { width: auto; min-height: 34px; flex: 0 0 auto; gap: 6px; padding: 4px 8px; background: transparent; }
+.custom-add-row td { padding: 4px 7px; }
+.add-custom-row { display: grid; width: 38px; height: 32px; place-items: center; padding: 0; border: 1px solid #42cf83; border-radius: 8px; background: #42cf8310; color: #42cf83; font-size: 27px; font-weight: 500; line-height: 1; }
+.add-custom-row:hover { background: #42cf8326; }
 table { width: 100%; min-width: 850px; table-layout: fixed; border-collapse: collapse; font-size: 14px; }
 table .part-column { width: 140px; }
 table .model-column { width: 220px; }
