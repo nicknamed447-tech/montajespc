@@ -1,7 +1,17 @@
 {
-  "checkedAt": "2026-10-24T05:37:29.568489+00:00",
+  "checkedAt": "2026-10-25T05:36:52.269601+00:00",
   "windowDays": 30,
   "alerts": [
+    {
+      "kind": "gpu",
+      "brand": "AMD",
+      "model": "Radeon RX 9070 XT",
+      "title": "The player bought Radeon RX 9070 XT for £750 after a broken used RX 7800 XT - GameGPU",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVkxUUEw3UnpQckhQTTFyekgwSzRpZVUtY1Z4RGhxdmw4TjNMRHdCdWFXcVZJQVdrYW9TTzBCbExQek9HTDI0WHFjWFROcVFsT0cyYWtTQ1RSNnlXMFY0ekdNSmZSNGdRSk1zN2FfSm1uN25VaTJWcDFoY3NFZEFtVk44RlF4UGRBSkFxTGExWllyWlF0aWdSY3VxX1FQUWlfU1NiVnVHZU5fOEplMmRhRlR5UQ?oc=5",
+      "date": "2026-10-24",
+      "source": "GameGPU",
+      "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
+    },
     {
       "kind": "cpu",
       "brand": "Intel",
@@ -40,6 +50,16 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTVJMSFpMNTAtY0NsM3E0OU1PdkkyUjAyS3Y4MFNfQmJ3V0k4NkFLNFFGeWZIeDIzbjNObEF1N1lSTkY0Y2xNT0JIdkpKc3RqcXVVZFdjVElhNUpvX3VwUkMzeXUzSURCd3g1RzFRMUlXY245VkVwaTVQY2hEZGlFWlRULWFBOXlXcEU3WG9CWHJJU1ozN1J0aTJjTWZhdXAxc2lOUkVkRUdFSmd3TEJqb1hBV2hudXhQTG50blR6REtBNDJJc0l6UlZyU2ZlQ2s?oc=5",
       "date": "2026-10-05",
       "source": "TweakTown",
+      "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
+    },
+    {
+      "kind": "cpu",
+      "brand": "Intel",
+      "model": "Core i9-14900K",
+      "title": "An Intel Customer’s 4th Core i9-14900K Has Begun To Degrade, With Even A Motherboard BIOS Update Unable To Remedy The Imminent Hardware Failure - Wccftech",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORU9OdzFWampKc2dRUjFndExfYzlKei1HNmlEbjhUNFdKblVyc0drbVJFRjdBQXBOVmtSZTBpbXg3b0FtYTNlVVEyeFQtOERweTloSndzaWg1aGxHWExURG1sQzh6LWpCdXNKZ3lHV3o1WFVYdmMwS1JJVzBjbTZRVEtRblplVldpSFYtYW1jeVlZNC0wWEFrbnJldlJod9IBowFBVV95cUxPY0xTc0NCQ0ptZlRJdk9lYWtJYVpGQS1WT2RwbHNxV29kMkJjRnVDNk9jeGs1VklGOEFYU2l0M05JMGpsa3hmaHBxS0IzU3dqdW1acDJNdm5YVGFzMUxCVjJHcGhQTzJCRGJ5d1dTa2c3a1AzYWlabjJZSmhoQjBidXl5Y3o5Z3ZQdjZVTG1TZTlvbE9zd2dvR3BVa2ZlSWZ2dHhV?oc=5",
+      "date": "2026-10-03",
+      "source": "Wccftech",
       "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
     }
   ]
