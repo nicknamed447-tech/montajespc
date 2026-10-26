@@ -1,7 +1,27 @@
 {
-  "checkedAt": "2026-10-25T05:36:52.269601+00:00",
+  "checkedAt": "2026-10-26T05:41:39.355660+00:00",
   "windowDays": 30,
   "alerts": [
+    {
+      "kind": "gpu",
+      "brand": "AMD",
+      "model": "Radeon RX 9070",
+      "title": "Apex Legends players with Radeon RX 9070 cards get a driver crash fix - MIXED News",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE53d1NwR0gyai1zWnY2OEgxQm1oclBqWjdUSlA2R3JScDJnaURXT0RuN0Q3S2ttNkJ2bjZuWXVYT3Z4cFp4NEwwSEw4ajdnZk5JTTBYcFBTQnFuV25HTWdJRFlPTDQwYTNBMHJ2dVZEd2RtaVlXLTIwZ1Y1NA?oc=5",
+      "date": "2026-10-25",
+      "source": "MIXED News",
+      "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
+    },
+    {
+      "kind": "gpu",
+      "brand": "Nvidia",
+      "model": "GeForce RTX 5080",
+      "title": "Using a three-pin adapter caused the GeForce RTX 5080's pins to burn out. - GameGPU",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYWhKNUZsbHRhUWpCMVJnOWdwZGp3bjhTTlAxSmNRU0J6VDZqNVNhVXRDY09LX3VBTW4yOGY2Q0NMQjhha3NFRlRyMDBVY20xeG11UF92QXVCWk5oTTZZaGZub1l3NzhQZk5QZzB0Wi1RVUFIVUtoU2R5aG5rWnJPRkZoaFFuSGJrcjRCRmhUb0JYWWF6ZDQ3VWtwRzNaekJMcFl2RHJEWUtiWS1kaXpNNHdUTWlqZl93YUY2aDlB?oc=5",
+      "date": "2026-10-25",
+      "source": "GameGPU",
+      "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
+    },
     {
       "kind": "gpu",
       "brand": "AMD",
