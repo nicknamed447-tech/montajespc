@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-30T05:51:04.958652+00:00",
+  "checkedAt": "2026-10-31T05:45:30.278940+00:00",
   "windowDays": 30,
   "alerts": [
     {
@@ -38,7 +38,7 @@
       "model": "GeForce RTX 5090",
       "title": "NVIDIA has approved the replacement of a burned-out GeForce RTX 5090 without a receipt. - GameGPU",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdE5UMGg4aEwzRWp6dXJIUHpUMHBJMGFvR0tWdTBRZEJTSUVENXNrMnpEQUlYcEl6LVJpT0ZmblItZzV2VWxZWHdvSVVPR1VOSllXZi1qUUl3WF93amVUMFp4d3NRQVM5d0pocGJKX3RoSGNGUUhsNUFyMmwxdHl6VjJVRG5CcjdzTEU5NjcwUEMwRUhMQ2hpZWM3cF9sSE1keU1hQ3h1ZzEyMjBGOUlydDZrWFlrMlE?oc=5",
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "source": "GameGPU",
       "warning": "Este reporte menciona un posible fallo o incidencia. Comprueba el artículo y confirma si afecta a esta variante exacta."
     },
